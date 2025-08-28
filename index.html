@@ -1,108 +1,507 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bikram's Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bikram — Portfolio</title>
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Page frame to mimic the screenshot vibe -->
+  <div class="page-frame py-4">
+    <div class="container-lg">
+      <!-- NAVBAR -->
+     <nav class="navbar navbar-expand-md rounded-2xl px-3 py-3 shadow-soft" style="background: #05366b;">
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h2 class="logo">BKD</h2>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+          <span class="profile-badge" style="width:40px;height:40px;font-size:.9rem;">B</span>
+          <span class="fw-bold text-primary">Bi<span class="text-primary">kr</span><span class="text-primary">am</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto align-items-center gap-md-3">
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="#Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="#works">Works</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="#contact">Contact</a></li>
 
-  <!-- Home Section -->
-  <section id="home" class="hero">
-    <div class="intro">
-      <h1>Hi, I'm <span>Bikram Keshari Dash</span></h1>
-      <h3>Java Full Stack Developer | Spring Boot | Database</h3>
-      <a href="#contact" class="btn">Hire Me</a>
+    <li class="nav-item">
+        <button id="themeToggle" class="btn bg-secondary text-white rounded-pill ms-md-2" aria-label="Toggle dark mode">
+          <i class="bi bi-brightness-high-fill d-none" id="sunIcon"></i>
+          <i class="bi bi-moon-stars" id="moonIcon"></i>
+        </button>
+    </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section id="home" class="section">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="rounded-2xl shadow-soft h-100 d-flex align-items-center justify-content-center p-4" style="background: var(--bs-body-bg);">
+              <img src="https://www.fullstackgurupune.com/storage/blog_icons/0ffdf6419b19d74c36c7334947518cb1.jpeg" class="img-fluid rounded-2xl" alt="Code preview" />
+              
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="rounded-2xl shadow-soft h-100 d-flex align-items-center justify-content-center p-4" style="background: var(--bs-body-bg);">
+              <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-2xl" alt="Code preview" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELECTED WORKS -->
+      <section id="works" class="section">
+        <div class="divider-title mb-4"><span>Selected Works</span></div>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-md-6">
+  <div class="card project-card rounded-2xl shadow-soft h-100">
+    <div class="row g-0 h-100 d-flex align-items-stretch">
+      
+      <!-- Left Content -->
+      <div class="col-6 left-band d-flex flex-column justify-content-between p-3">
+        <div>
+          <h5 class="fw-bold">🎟 Movie Ticket Booking System</h5>
+          <p>
+            Developed a Movie Ticket Booking System, a web-based application that allows users to browse movies, 
+            view showtimes, select seats, and book tickets online with real-time availability and secure login.
+          </p>
+        </div>
+        <a class="small fw-semibold mt-auto" href="#">
+          view project <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+      
+      <!-- Right Image -->
+      <div class="col-6 right-illustration d-flex align-items-center justify-content-center p-3">
+        <img class="img-fluid h-100 w-100 object-fit-cover rounded-2xl" 
+             alt="illustration" 
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROMAhBE2ci2IuUWQcCytXornYks9KeqUfd4g&s" />
+      </div>
+      
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      Detail-oriented Full Stack Developer with strong foundational knowledge
-      in front-end and back-end technologies. Proficient in Java, Spring Boot,
-HTML, CSS, JavaScript,Hibernate, and MySQL/PostgreSQL with a solid
-understanding of object-oriented programming, database management,
-and RESTful API integration. Strong ability to create responsive and
-user-friendly interfaces using modern web technologies. Skilled in
-debugging, performance optimization, and version control using Git.
-Capable of working in agile environments with a focus on delivering
-high-quality, scalable, and maintainable code. Eager to contribute to
-innovative projects and grow as a software development professional.
-    </p>
-  </section>
+<!--project 2-->
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>🎟 Ticket Booking System</h3>
-        <p>Online movie ticket booking app using Spring Boot & MySQL.</p>
+   <div class="col-md-6">
+  <div class="card project-card rounded-2xl shadow-soft h-100">
+    <div class="row g-0 h-100 d-flex align-items-stretch">
+      
+      <!-- Left Content -->
+      <div class="col-6 left-band d-flex flex-column justify-content-between p-3">
+        <div>
+          <h5 class="fw-bold">💵Financial Reconciliation System</h5>
+          <p>
+            Developed a web-based full stack application to automatically reconcile financial transactions, 
+            ensuring accuracy, faster processing, and reduced manual effort. It provides secure data handling, 
+            real-time validation for effective financial monitoring.
+          </p>
+        </div>
+        <a class="small fw-semibold mt-auto" href="#">
+          view project <i class="bi bi-arrow-right-short"></i>
+        </a>
       </div>
-      <div class="card">
-        <h3>🛒 E-Commerce Platform</h3>
-        <p>Frontend shopping site with HTML, CSS, and JavaScript (product browsing).</p>
+      
+      <!-- Right Image -->
+      <div class="col-6 right-illustration d-flex align-items-center justify-content-center p-3">
+        <img class="img-fluid h-100 w-100 object-fit-cover rounded-2xl" 
+             alt="illustration" 
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXaqm4dIwSatpG86jXr8vO7XBBE4ek8ildg&s" />
       </div>
-      <div class="card">
-        <h3>🐶 Tindog Website</h3>
-        <p>Responsive landing page for dog lovers using Bootstrap.</p>
+      
+    </div>
+  </div>
+</div>
+
+<!--project 3-->
+           <div class="col-md-6">
+  <div class="card project-card rounded-2xl shadow-soft h-100">
+    <div class="row g-0 h-100 d-flex align-items-stretch">
+      
+      <!-- Left Content -->
+      <div class="col-6 left-band d-flex flex-column justify-content-between p-3">
+        <div>
+          <h5 class="fw-bold">🛍️ Smart E-Commerce Solution</h5>
+          <p>
+          Developed an online shopping system that allows users to browse products, manage carts, complete secure checkouts, and track orders. 
+          It also provides an admin panel for product management, ensuring smooth business operations and a seamless shopping experience.
+          </p>
+        </div>
+        <a class="small fw-semibold mt-auto" href="#">
+          view project <i class="bi bi-arrow-right-short"></i>
+        </a>
       </div>
-      <div class="card">
-        <h3>💼 Portfolio Website</h3>
-        <p>Responsive personal portfolio with modern design.</p>
+      
+      <!-- Right Image -->
+      <div class="col-6 right-illustration d-flex align-items-center justify-content-center p-3">
+        <img class="img-fluid h-100 w-100 object-fit-cover rounded-2xl" 
+             alt="illustration" 
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_R5DzXG1xzQPIEmC4oPLqp2WTaEhpGcf6mQ&s" />
+      </div>
+      
+    </div>
+  </div>
+</div>
+          <!-- Project 4 -->
+          <div class="col-md-6">
+  <div class="card project-card rounded-2xl shadow-soft h-100">
+    <div class="row g-0 h-100 d-flex align-items-stretch">
+      
+      <!-- Left Content -->
+      <div class="col-6 left-band d-flex flex-column justify-content-between p-3">
+        <div>
+          <h5 class="fw-bold">🎓 EduConnect – Virtual Learning System</h5>
+          <p>
+           Developed a web-based platform that enables students to browse courses, attend virtual classes, take quizzes, and track their learning progress.
+            It also provides instructors with tools to manage courses, upload content, and monitor student performance.
+          </p>
+        </div>
+        <a class="small fw-semibold mt-auto" href="#">
+          view project <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+      
+      <!-- Right Image -->
+      <div class="col-6 right-illustration d-flex align-items-center justify-content-center p-3">
+        <img class="img-fluid h-100 w-100 object-fit-cover rounded-2xl" 
+             alt="illustration" 
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYPVlHKvj_DXOVj0C5sMvw-o5ZhGjSp1e33g&s" />
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <div class="rounded-2xl shadow-soft overflow-hidden">
+              <img src="Folio.jpg" alt="profile" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="fw-bold">About Me</h2>
+            <p class="lead opacity-85">I’m a detail-oriented Java Full Stack Developer who loves solving problems and turning ideas into functional applications. With expertise in back-end technologies 
+              like Java, Spring Boot, and Hibernate, along with front-end tools like React, Bootstrap, and JavaScript, I thrive on building complete, user-friendly solutions in collaborative environments.</p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="p-3 rounded-2xl shadow-soft" style="background: var(--bs-body-bg);">
+                  <div class="fw-semibold mb-1">Skills</div>
+                  <div class="small opacity-85">Java, Spring, Spring Boot, Microservices, JavaScript, SQL, Reacst.js</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-2xl shadow-soft" style="background: var(--bs-body-bg);">
+                  <div class="fw-semibold mb-1">Services</div>
+                  <div class="small opacity-85">Website Design & Development, REST API Development, Database Design & Optimization</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section id="education" class="section">
+  <div class="divider-title mb-4"><span>Education</span></div>
+  <div class="timeline">
+
+    <div class="mb-4">
+      <h5 class="fw-bold">Master of Computer Application
+        <details style="display: inline;">
+          <summary style="color: #05366b; text-decoration: none; cursor: pointer;">
+            — Biju Patnaik University Of Technology, Rourkela
+          </summary>
+          <img src="MCA.jpg" alt="MCA Certificate"
+               style="max-width: 250px; height: auto; display: block; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </details>
+      </h5>
+      <p class="small opacity-85">2022 – 2024</p>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="fw-bold">Bachelors Degree
+        <details style="display: inline;">
+          <summary style="color: #05366b; text-decoration: none; cursor: pointer;">
+            — Fakir Mohan University, Balasore
+          </summary>
+          <img src="Graduate.jpg" alt="Graduate Certificate"
+               style="max-width: 250px; height: auto; display: block; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </details>
+      </h5>
+      <p class="small opacity-85">2019 – 2022</p>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="fw-bold">Intermediate
+        <details style="display: inline;">
+          <summary style="color: #05366b; text-decoration: none; cursor: pointer;">
+            — GKRC, Jajpur
+          </summary>
+          <img src="Intermdiate.jpg" alt="Intermediate Certificate"
+               style="max-width: 250px; height: auto; display: block; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </details>
+      </h5>
+      <p class="small opacity-85">2017 – 2019</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+      <section id="skills" class="section">
+  <div class="divider-title mb-4"><span>Tech Stack</span></div>
+  <div class="row text-center g-4">
+    <div class="col">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" 
+       alt="Java Logo" 
+       style="width:40px; height:40px;">
+      <p class="fw-semibold mt-2">Java</p>
+   </div>
+  <div class="col">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" 
+       alt="Spring Boot Logo" 
+       style="width:40px; height:40px;">
+       <p class="fw-semibold mt-2">Spring Boot</p>
+  </div>
+
+  <div class="col">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+       alt="MySQL Logo" 
+       style="width:40px; height:40px;">
+      <p class="fw-semibold mt-2">MySQL</p>
+  </div>
+
+  <div class="col">
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+       alt="React Logo" 
+       style="width:40px; height:40px;">
+       <p class="fw-semibold mt-2">React</p>
+  </div>
+
+  <div class="col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRyWS8fdfIyjObKkAFU8820lDvAKB0fNMpPw&s" 
+       alt="JavaScript Logo" 
+       style="width:40px; height:40px;">
+       <p class="fw-semibold mt-2">JavaScript</p>
+ </div>
+  
+ <div class="col">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+       alt="Python Logo" 
+       style="width:40px; height:40px;">
+      <p class="fw-semibold mt-2">Python</p>
+ </div>
+  </div>
+</section>
+<section id="experience" class="section">
+  <div class="divider-title mb-4"><span>Experience</span></div>
+  <div class="timeline">
+    <div class="mb-4">
+      <h5 class="fw-bold">Java Developer Intern <span class="text-muted">— Tata Power Northen Odisha Distribution Limited</span></h5>
+      <p class="small opacity-85">June 2024 – Sep 2024</p>
+      <p>As a Java Developer Intern, my primary responsibility was to fetch and compare financial transaction data from two independent systems to ensure accuracy and consistency.
+         I leveraged Spring Data JPA for ORM and database integration, enabling secure transaction storage and efficient reconciliation. Additionally, 
+        I implemented exception handling, SLF4J-based logging, and input validation, which improved the system’s reliability and maintainability.</p>
+    </div>
+  <div class="mb-4">
+      <h5 class="fw-bold">Web Developer Intern <span class="text-muted">— CasCode</span></h5>
+      <p class="small opacity-85">Dec 2024 – Mar 2025</p>
+      <p>As a Web Developer Intern, I developed responsive web pages using HTML, CSS, JavaScript, and React.js for a Customer Feedback & Support Portal.
+         I implemented interactive UI components, form validations, and reusable elements to enhance user experience. I ensured cross-browser and cross-device compatibility through testing and performance optimization. Collaborating with backend developers and designers,
+         I delivered a seamless and user-friendly interface, strengthening my front-end development and teamwork skills.</p>
+  </div>
+  </div>
+</section>
+<section id="certifications" class="section">
+  <div class="divider-title mb-4"><span>Certifications</span></div>
+  <div class="row align-items-center">
+    <!-- Left side image -->
+    <div class="col-md-4 text-center mb-3 mb-md-0">
+      <img src="https://hsfgroup.net/wp-content/uploads/2018/02/certified-800x600_63288526.jpg" 
+           alt="Certifications" 
+           class="img-fluid rounded shadow-sm">
+    </div>
+
+    <!-- Right side content -->
+    <div class="col-md-8">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <i class="bi bi-award-fill text-warning me-2"></i> 
+      Full Stack Development - 
+      <a href="#" onclick="showImage('Certificate.jpg'); return false;" style="color: black; text-decoration: none;">
+        <strong>JSpider</strong>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-award-fill text-warning me-2"></i> 
+      Web Development - 
+      <a href="#" onclick="showImage('WEB.jpg'); return false;" style="color: black; text-decoration: none;">
+       <strong>ApnaCollege</strong>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-award-fill text-warning me-2"></i> 
+      Internet of Things - 
+      <a href="#" onclick="showImage('IOT.jpg'); return false;" style="color: black; text-decoration: none;">
+       <strong>IIT Kharagpur</strong>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Image container -->
+  <div class="mt-4 text-center">
+    <img id="displayImage" src="" alt="" style="max-width: 100%; height: auto; display: none; border: 1px solid #ccc; padding: 5px;">
+  </div>
+</div>
+  </div>
+</section>
+ <section id="testimonials" class="section">
+  <div class="divider-title mb-4"><span>Testimonials</span></div>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg);">
+        <p>"Bikram is a highly skilled developer. His work on our web platform was efficient, professional, and exceeded expectations."</p>
+        <h6 class="fw-bold mt-2 mb-0">— John Doe, CEO</h6>
       </div>
     </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Java, C, SQL, JavaScript</li>
-      <li>Spring Boot, Hibernate, REST API</li>
-      <li>MySQL, PostgreSQL</li>
-      <li>HTML, CSS, Bootstrap</li>
-      <li>Git, GitHub, Eclipse, VS Code</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <div class="social">
-      <p>Email: <a href="mailto:bikramkesharidash7077@gmail.com">bikramkesharidash7077@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/bikramda" target="_blank">linkedin.com/in/bikramda</a></p>
-      <p>GitHub: <a href="https://github.com/Lipun120" target="_blank">github.com/Myprofile</a></p>
+    <div class="col-md-6">
+      <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg);">
+        <p>"Excellent collaboration and attention to detail. Bikram turned our idea into a smooth, user-friendly application."</p>
+        <h6 class="fw-bold mt-2 mb-0">— Jane Smith, Project Manager</h6>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Bikram Keshari Dash. All rights reserved.</p>
-  </footer>
 
+<section id="achievements" class="section">
+  <div class="divider-title mb-4"><span>Achievements</span></div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg); text-align:center;">
+        <i class="bi bi-trophy-fill fs-2 text-warning mb-2"></i>
+        <h6 class="fw-bold">Best Intern Award</h6>
+        <p class="small opacity-85">Awarded for outstanding performance during Java Developer Internship at Tata Power.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg); text-align:center;">
+        <i class="bi bi-trophy-fill fs-2 text-warning mb-2"></i>
+        <h6 class="fw-bold">Institue Winner</h6>
+        <p class="small opacity-85">Proudly won 1st Place in my Institute Hackathon for an intensive coding test!</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg); text-align:center;">
+        <i class="bi bi-trophy-fill fs-2 text-warning mb-2"></i>
+        <h6 class="fw-bold">Coding Excellence</h6>
+        <p class="small opacity-85">Recognized for top performance in competitive coding and algorithm challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hobbies" class="section">
+  <div class="divider-title mb-4"><span>Hobbies & Interests</span></div>
+  <div class="row text-center g-4">
+    <div class="col-md-3">
+      <i class="bi bi-music-note-beamed fs-1 mb-2"></i>
+      <p class="fw-semibold">Chanting</p>
+    </div>
+    <div class="col-md-3">
+      <p class="fs-1 mb-2">🏏</p>
+      <p class="fw-semibold">Cricket</p>
+    </div>
+    <div class="col-md-3">
+      <i class="bi bi-code-slash fs-1 mb-2"></i>
+      <p class="fw-semibold">Coding Challenges</p>
+    </div>
+    <div class="col-md-3">
+      <i class="bi bi-bicycle fs-1 mb-2"></i>
+      <p class="fw-semibold">Cycling</p>
+    </div>
+  </div>
+</section>
+
+<section id="volunteer" class="section">
+  <div class="divider-title mb-4"><span>Volunteer & Social Work</span></div>
+  <ul class="list-group">
+    <li class="list-group-item">👨‍🏫 Conducted coding workshops for college students</li>
+    <li class="list-group-item">🌱 Participated in tree plantation drives</li>
+    <li class="list-group-item">🤝 Helped organize community tech events</li>
+  </ul>
+</section>
+
+<section id="languages" class="section">
+  <div class="divider-title mb-4"><span>Languages</span></div>
+  <div class="row text-center g-4">
+    <div class="col-md-4"><p class="fw-semibold">English – Fluent</p></div>
+    <div class="col-md-4"><p class="fw-semibold">Hindi – Fluent</p></div>
+    <div class="col-md-4"><p class="fw-semibold">Odia – Native</p></div>
+  </div>
+</section>
+
+
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="divider-title mb-4"><span>Contact</span></div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="p-4 rounded-2xl shadow-soft" style="background: var(--bs-body-bg);">
+              <form class="row g-3" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! I\'ll get back to you soon.');">
+                <div class="col-md-6"><label class="form-label">Name</label><input type="text" class="form-control" required></div>
+                <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+                <div class="col-12"><label class="form-label">Message</label><textarea class="form-control" rows="5" required></textarea></div>
+                <div class="col-12"><button class="btn cta-primary rounded-pill px-4">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 rounded-2xl shadow-soft h-100" style="background: var(--bs-body-bg);">
+              <div class="d-flex flex-column gap-3">
+                <div><i class="bi bi-envelope me-2"></i> bikramdash9861@gmail.com</div>
+                <div><i class="bi bi-geo-alt me-2"></i> Bengaluru, India</div>
+                <div><i class="bi bi-telephone me-2"></i> +91 9861147637</div>
+                <div class="social d-flex gap-2 mt-2">
+                  <a href="https://github.com/Lipun120" target="_blank" aria-label="GitHub"> <i class="bi bi-github"></i></a>
+                  <a href="https://x.com/BikramD98913204" aria-label="GitHub"><i class="bi bi-twitter"></i></a>
+                  <a href="http://www.linkedin.com/in/bikramda" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="py-4">
+        <div class="d-flex justify-content-between small opacity-75">
+          <div>© <span id="year"></span> Bikram. All rights reserved.</div>
+          <a href="#home" class="link-secondary">Back to top ↑</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
