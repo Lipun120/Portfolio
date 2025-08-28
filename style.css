@@ -1,164 +1,48 @@
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+:root {
+      --brand: #ff4d5a;
+      --radius: 1.25rem;
+    }
 
-body {
-  line-height: 1.6;
-  color: #333;
-}
+    /* Typography */
+    body { 
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; 
+    }
+    h1, .display-5 {
+       letter-spacing: .2px;
+       }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #24a3f1;
-}
+    /* Layout helpers */
+    .section {
+       padding: 72px 0; }
+    .rounded-2xl { border-radius: var(--radius); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.12); }
 
-.section {
-  padding: 60px 20px;
-}
+    /* Hero card look */
+    .profile-badge {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: grid; place-items: center; font-weight: 700; color: #fff; background: var(--brand);
+    }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #081a42;
-  color: #1e0404;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    .cta-primary { background: var(--brand); border: none; }
+    .cta-primary:hover { filter: brightness(.95); }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+    /* Project card */
+    .project-card { overflow: hidden; border: 0; background: var(--bs-body-bg); }
+    .project-card .left-band { min-height: 220px; display: grid; align-content: center; padding: 28px; }
+    .project-card .left-band h5 { margin-bottom: .25rem; }
+    .project-card .right-illustration { background: rgba(255,255,255,.04); display: grid; place-items: center; }
+    .project-card a { text-decoration: none; }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-}
+    /* Divider title */
+    .divider-title { display: flex; align-items: center; gap: 16px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; opacity: .85; }
+    .divider-title::before { content: ""; flex: 1; height: 1px; background: var(--bs-border-color); }
 
-.nav-links li {
-  margin: 0 15px;
-}
+    /* Footer */
+    footer .social a { width: 40px; height: 40px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--bs-border-color); }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
+    /* Light/Dark preview background frame */
+    .page-frame { background: #0e2641; }
+    [data-bs-theme="light"] .page-frame { background: #e9eef5; }
 
-.nav-links a:hover {
-  color: #f39c12;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("https://www.fullstackgurupune.com/storage/blog_icons/0ffdf6419b19d74c36c7334947518cb1.jpeg") center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 40px;
-}
-
-.hero span {
-  color: #f39c12;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #f39c12;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #d35400;
-}
-
-/* Projects */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* Skills */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-}
-
-.skills-list li {
-  background: #f39c12;
-  color: #fff;
-  margin: 8px;
-  padding: 10px 15px;
-  border-radius: 20px;
-}
-
-/* Contact */
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
-}
-
-.contact input, .contact textarea {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact button {
-  align-self: center;
-}
-
-.social {
-  text-align: center;
-  margin-top: 20px;
-}
-
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 20px;
-}
+    /* Smooth anchor scrolling */
+    html { scroll-behavior: smooth; }
